@@ -8,8 +8,11 @@ import Navbar from './components/Navbar';
 
 import './App.css';
 
+import './App.scss';
+
 function App() {
   return (
+    
     <Router>
       <Navbar />
       <Routes>
@@ -23,3 +26,5 @@ function App() {
 }
 
 export default App;
+
+

@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="navbar">
+      <div className="header">My Gaming App</div>
       <ul>
         <li><Link to="/">Dashboard</Link></li>
         <li><Link to="/game-shop">GameShop</Link></li>
@@ -15,3 +16,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
