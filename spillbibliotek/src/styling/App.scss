@@ -82,5 +82,26 @@ body, html {
     background-color: #4CAF50; /* Green */
     color: white;
   }
+
+  footer {
+    background-color: #282c34; /* Dark grey background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 20px 0; /* 20px padding at the top and bottom */
+    position: fixed; /* Footer will stick to the bottom */
+    left: 0; /* Align left */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+  
+    a {
+      color: #61dafb; /* Light blue links */
+      text-decoration: none; /* Remove underline */
+  
+      &:hover {
+        color: white; /* White link on hover */
+      }
+    }
+  }
+  
   
   

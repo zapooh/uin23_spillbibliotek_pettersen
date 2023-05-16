@@ -5,14 +5,12 @@ import GameShop from './components/GameShop';
 import MyGames from './components/MyGames';
 import MyFavourites from './components/MyFavourites';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-import './App.css';
-
-import './App.scss';
+import '/Users/hjem/Documents/GitHub/uin23_spillbibliotek_pettersen/spillbibliotek/src/styling/App.scss';
 
 function App() {
   return (
-    
     <Router>
       <Navbar />
       <Routes>
@@ -21,10 +19,9 @@ function App() {
         <Route path="/my-games" element={<MyGames />} />
         <Route path="/my-favourites" element={<MyFavourites />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
 
 export default App;
-
-
