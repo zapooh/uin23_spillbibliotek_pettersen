@@ -1,0 +1,43 @@
+.game-page {
+    padding: 20px;
+  
+    .game-info {
+      display: flex;
+      margin-bottom: 20px;
+  
+      img {
+        margin-right: 20px;
+        width: 300px;
+        height: auto;
+      }
+  
+      .game-details {
+        h1 {
+          margin: 0 0 10px 0;
+          font-size: 28px;
+        }
+  
+        p {
+          margin: 0 0 10px 0;
+          color: #555;
+        }
+      }
+    }
+  
+    .game-description {
+      line-height: 1.5;
+      color: #333;
+    }
+  }
+
+  // GamePage.scss
+
+  .game-shop, .my-games {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  
+  
