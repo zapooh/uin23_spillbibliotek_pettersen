@@ -13,12 +13,14 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/game-shop" element={<GameShop />} />
-        <Route path="/my-games" element={<MyGames />} />
-        <Route path="/my-favourites" element={<MyFavourites />} />
-      </Routes>
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/game-shop" element={<GameShop />} />
+          <Route path="/my-games" element={<MyGames />} />
+          <Route path="/my-favourites" element={<MyFavourites />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );
