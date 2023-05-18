@@ -44,37 +44,49 @@ const Dashboard = ({ favourites }) => {
 
   return (
     <div className="content">
-      {/* ... other sections ... */}
-      <div className="section" id="game-shop">
-        <h2>GameShop</h2>
-        {latestGames.map((game) => (
-          <GameCard key={game.id} game={game} showBuyButton={true} onBuy={buyGame} />
-        ))}
-        <Link to="/game-shop">
-          <button>Visit Shop</button>
-        </Link>
-      </div>
-      <div className="bottom-row">
-        <div className="section" id="my-favourites">
-          <h2>MyFavourites</h2>
-          {favourites.slice(0, 3).map((game) => (
-            <GameCard key={game.id} game={game} showBuyButton={false} />
-          ))}
-          <Link to="/my-favourites">
-            <button>Go to Favourites</button>
-          </Link>
+  <div className="section" id="game-shop">
+    <h2 className="section-title">GameShop</h2>
+    <div className="game-card-container">
+      {latestGames.map((game) => (
+        <div className="game-card" key={game.id}>
+          <GameCard game={game} showBuyButton={true} onBuy={buyGame} />
         </div>
-        <div className="section" id="my-games">
-          <h2>MyGames</h2>
-          {sameGenreGames.map((game) => (
-            <GameCard key={game.id} game={game} showBuyButton={false} />
-          ))}
-          <Link to="/my-games">
-            <button>Go to Library</button>
-          </Link>
-        </div>
-      </div>
+      ))}
     </div>
+    <Link to="/game-shop">
+      <button>Visit Shop</button>
+    </Link>
+  </div>
+  <div className="bottom-row">
+    <div className="section" id="my-favourites">
+      <h2>MyFavourites</h2>
+      <div className="game-card-container">
+        {favourites.slice(0, 4).map((game) => (
+          <div className="game-card" key={game.id}>
+            <GameCard game={game} showBuyButton={false} />
+          </div>
+        ))}
+      </div>
+      <Link to="/my-favourites">
+        <button>Go to Favourites</button>
+      </Link>
+    </div>
+    <div className="section" id="my-games">
+      <h2>MyGames</h2>
+      <div className="game-card-container">
+        {sameGenreGames.map((game) => (
+          <div className="game-card" key={game.id}>
+            <GameCard game={game} showBuyButton={false} />
+          </div>
+        ))}
+      </div>
+      <Link to="/my-games">
+        <button>Go to Library</button>
+      </Link>
+    </div>
+  </div>
+</div>
+
   );
 };
 
